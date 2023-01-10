@@ -1,11 +1,15 @@
 #!/usr/bin/python3
-class MyInt(int):
-    """ Class that inherits from class int"""
+"""
+Defines the class MyInt
+"""
 
+
+class MyInt(int):
+    """rebel version of an int"""
     def __eq__(self, other):
-        """ Method that returns != check """
-        return int.__ne__(self, other)
+        """returns the opposite of equal(eq)"""
+        return int(self) != other
 
     def __ne__(self, other):
-        """ Method that returns == check """
-        return int.__eq__(self, other)
+        """returns the opposite of not equal(ne)"""
+        return int(self) == other
